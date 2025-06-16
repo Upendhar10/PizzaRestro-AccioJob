@@ -9,3 +9,88 @@ body {
   height: 100%;
   width: 100%;
 }
+
+:root {
+  --primary-color: #fff;
+  --primary-Bg-color: #000;
+}
+
+body {
+  background-color: var(--primary-Bg-color);
+  color: var(--primary-color);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.25rem 1rem;
+  text-transform: uppercase;
+  background-color: red;
+
+  position: sticky;
+  top: 0;
+}
+
+header .Logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+header .Logo img {
+  width: 40px;
+  height: 40px;
+}
+
+header .Logo h2 {
+  font-size: 1.5rem;
+  text-transform: none;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-block: 1rem;
+  cursor: pointer;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.socials i {
+  font-size: 1.5rem;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 768px) {
+  header {
+    flex-direction: row;
+  }
+
+  header nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
