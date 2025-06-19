@@ -20,6 +20,7 @@ body {
   color: var(--primary-color);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  position: relative;
 }
 
 a {
@@ -41,7 +42,7 @@ header {
   text-transform: uppercase;
   background-color: red;
 
-  position: fixed;
+  position: sticky;
   top: 0;
 }
 
@@ -192,6 +193,8 @@ header nav ul {
 .card {
   max-width: 400px;
   margin-block: 1rem;
+  background-color: #000;
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -208,6 +211,14 @@ header nav ul {
 
 .card img {
   width: 100%;
+}
+
+.card h3 {
+  font-style: italic;
+}
+
+.carousel {
+  padding: 2rem;
 }
 
 /* ---------------------------------------------------------------- */
@@ -273,5 +284,12 @@ header nav ul {
     font-size: 0.75rem;
     font-style: italic;
     line-height: 1.5;
+  }
+
+  .carousel {
+    width: 90%;
+    height: 75%;
+    margin: auto;
+    padding: 5rem;
   }
 }
