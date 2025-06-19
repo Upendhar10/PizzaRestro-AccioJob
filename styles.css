@@ -221,6 +221,26 @@ header nav ul {
   padding: 2rem;
 }
 
+footer {
+  padding: 1rem;
+  max-width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .contact {
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 2rem;
+}
+
+footer img {
+  width: 150px;
+  height: 100px;
+}
+
 /* ---------------------------------------------------------------- */
 
 /* Media Queries */
