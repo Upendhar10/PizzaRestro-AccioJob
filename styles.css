@@ -34,10 +34,10 @@ li {
 header {
   width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 0.25rem 1rem;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
   text-transform: uppercase;
   background-color: red;
 
@@ -60,6 +60,15 @@ header .Logo h2 {
   font-size: 1.5rem;
   text-transform: none;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+header nav {
+  display: none;
+}
+
+header .menuIcon {
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 header nav ul {
@@ -86,7 +95,7 @@ header nav ul {
 .main-banner {
   background-image: url("./assets/PizzaRestroHero.png");
   background-position: top;
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,7 +140,7 @@ header nav ul {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin-block: 1rem;
+  /* margin-block: 1rem; */
 }
 
 .AboutUs-container p {
@@ -152,6 +161,55 @@ header nav ul {
   height: 300px;
 }
 
+.Menu {
+  padding: 3rem;
+  text-align: center;
+}
+
+.Menu h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-decoration: underline red;
+}
+
+.Menu p {
+  max-width: 80vw;
+  margin: auto;
+  margin-block: 0.5rem;
+  font-style: italic;
+  line-height: 2rem;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  max-width: 400px;
+  margin-block: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.card:hover {
+  border: 2px solid red;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+}
+
 /* ---------------------------------------------------------------- */
 
 /* Media Queries */
@@ -161,9 +219,17 @@ header nav ul {
     flex-direction: row;
   }
 
+  header nav {
+    display: flex;
+  }
+
   header nav ul {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .menuIcon {
+    display: none;
   }
 
   .main-banner h1 {
@@ -183,5 +249,29 @@ header nav ul {
   .AboutUs-container p {
     max-width: 40vw;
     line-height: 2rem;
+  }
+
+  .card-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .card {
+    max-width: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .card img {
+    width: 50%;
+    min-height: 200px;
+  }
+
+  .card-text p {
+    font-size: 0.75rem;
+    font-style: italic;
+    line-height: 1.5;
   }
 }
